@@ -1,15 +1,9 @@
-import React from 'react';
-import './App.scss';
-import Header from "../widgets/Header/Header.tsx";
-import Main from "../widgets/Main/Main.tsx";
+import React from "react";
+import "./App.scss";
+import MainPage from "../pages/MainPage/MainPage.tsx";
 
 const App: React.FC = () => {
-  return (
-    <>
-    <Header/>
-    <Main/>
-    </>
-  );
-}
+  return <MainPage />;
+};
 
 export default App;

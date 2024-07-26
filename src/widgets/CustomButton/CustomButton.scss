@@ -1,0 +1,23 @@
+@import "../../shared/Colors.scss";
+
+button{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: $color-black-text;
+    padding: 9px 17px 9px 13px;
+    gap: 8px;
+    border: 1px solid $color-gray;
+    border-radius: 6px;
+    background-color: $color-white;
+
+    svg{
+        width: 16px;
+        fill: $color-gray-icon;
+    }
+}
+
+button:hover{
+    background-color: $color-gray;
+    transition: all 0.5s ease;
+}

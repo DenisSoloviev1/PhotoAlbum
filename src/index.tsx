@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
 import App from './app/App.tsx';
 
 const rootElement:HTMLElement | null =  document.getElementById('root');

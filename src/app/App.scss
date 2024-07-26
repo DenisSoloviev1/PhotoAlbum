@@ -1,3 +1,50 @@
+@import "../shared/Colors.scss";
+
+@font-face {
+  font-family: Inter;
+  src: url("./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  all: unset;
+}
+button {
+  cursor: pointer;
+}
+button:focus,
+button:active {
+  outline: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
 body{ 
+  margin: 0;
   width: 100vw;
+  height: 100vh;
+  background-color: $color-white-background;
+  color: $color-black;
+
+  #root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+  }
+
 }
