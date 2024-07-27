@@ -3,7 +3,12 @@ import "./Header.scss";
 import Avatar from "./Avatar/Avatar.tsx";
 import CustomButton from "../CustomButton/CustomButton.tsx";
 
-const Header: React.FC = () => {
+interface HeaderProps{
+  name: string;
+  toggleModalWindow: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({name, toggleModalWindow}) => {
   const imgBackgraund = require("./img-bg.jpg");
   const avatar = require("./Avatar/avatar.jpg");
 
@@ -13,7 +18,7 @@ const Header: React.FC = () => {
       <div className="bio">
         <Avatar image={avatar} />
         <div className="info">
-          <h1>Ricardo Cooper</h1>
+          <h1>{name}</h1>
           <div className="buttons">
             <CustomButton
               svg={
@@ -29,6 +34,7 @@ const Header: React.FC = () => {
                 </svg>
               }
               text={"Message"}
+              onClick={toggleModalWindow}
             />
             <CustomButton
               svg={
@@ -41,6 +47,7 @@ const Header: React.FC = () => {
                 </svg>
               }
               text={"Call"}
+              onClick={toggleModalWindow}
             />
           </div>
         </div>

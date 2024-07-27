@@ -1,0 +1,18 @@
+@import "../../shared/Colors.scss";
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  box-sizing: border-box;
+
+  section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 32px;
+  }
+}

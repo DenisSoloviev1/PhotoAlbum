@@ -31,7 +31,7 @@ button:active {
 ::-webkit-scrollbar {
   width: 0;
 }
-body{ 
+body {
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -40,11 +40,11 @@ body{
 
   #root {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-family: 'Inter';
+    font-family: "Inter";
+    font-weight: 500;
   }
-
 }

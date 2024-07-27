@@ -2,13 +2,15 @@ import React from "react";
 import "./CustomButton.scss";
 
 interface CustomButtonProps {
+  className?: string;
   text: string;
-  svg?: React.ReactNode;
+  svg?: JSX.Element;
+  onClick?: () => void;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({ text, svg }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({ className, text, svg, onClick }) => {
   return (
-    <button>
+    <button className={className} onClick={onClick}>
       {svg}
       {text}
     </button>
