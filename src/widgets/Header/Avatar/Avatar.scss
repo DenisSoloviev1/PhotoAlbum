@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 100%;
   min-height: 75px;
   max-height: 110px;
   min-width: 75px;
@@ -24,8 +23,3 @@
   }
 }
 
-@media screen and (min-width: 769px) {
-  .avatar {
-    min-height: 115px;
-  }
-}
