@@ -1,4 +1,4 @@
-@import "../shared/Colors.scss";
+@import "../shared/Variables.scss";
 
 @font-face {
   font-family: Inter;
@@ -13,6 +13,9 @@ h5,
 p {
   margin: 0;
 }
+h1 {
+  @include adaptiv-font(32, 14);
+}
 a {
   text-decoration: none;
 }
@@ -23,6 +26,8 @@ textarea {
 }
 button {
   cursor: pointer;
+  // font-size: 14px;
+  @include adaptiv-font(14, 12);
 }
 button:focus,
 button:active {
@@ -31,6 +36,7 @@ button:active {
 ::-webkit-scrollbar {
   width: 0;
 }
+
 body {
   margin: 0;
   width: 100vw;

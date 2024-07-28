@@ -1,4 +1,4 @@
-@import "../../shared/Colors.scss";
+@import "../../shared/Variables.scss";
 
 .background {
   position: absolute;
@@ -12,24 +12,25 @@
   z-index: 3;
 
   .modalWindow {
-    width: 50%;
-    height: 90%;
+    width: 80%;
+    height: 60%;
     background-color: $color-white;
     box-shadow: 0px 10px 10px -5px #0000000a;
     box-shadow: 0px 20px 25px -5px #0000001a;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 24px;
-    gap: 24px;
+    padding: 12px;
+    gap: 12px;
     box-sizing: border-box;
 
     img {
       width: 60%;
-      height: 50%;
+      height: 30%;
       object-fit: cover;
-      border-radius: 24px;
+      border-radius: 12px;
       box-shadow: 0px 25px 50px -12px #00000040;
     }
 
@@ -70,4 +71,20 @@
 
 .background.show {
   display: flex;
+}
+
+@media screen and (min-width: 769px) {
+  .background {
+    .modalWindow {
+      width: 50%;
+      height: 90%;
+      padding: 24px;
+      gap: 24px;
+
+      img {
+        height: 50%;
+        border-radius: 24px;
+      }
+    }
+  }
 }

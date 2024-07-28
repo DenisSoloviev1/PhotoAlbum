@@ -17,8 +17,8 @@ const MainPage: React.FC = () => {
         show={showModalWindow}
         handleClose={toggleModalWindow}
       />
-      <Header name={"Ricardo Cooper"} toggleModalWindow={toggleModalWindow}/>
-      <Main />
+      <Header name={"Ricardo Cooper"} />
+      <Main toggleModalWindow={toggleModalWindow}/>
     </div>
   );
 };
