@@ -1,14 +1,15 @@
-@import "../../shared/Variables.scss";
+@import "../../shared/Variables.module.scss";
 
 main {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 32px;
+  padding: 64px 32px 32px;
   box-sizing: border-box;
 
   section {
     width: 100%;
+    max-width: 1920px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;

@@ -1,17 +1,17 @@
-@import "../../shared/Variables.scss";
+@import "../../shared/Variables.module.scss";
 
-.background {
-  position: absolute;
+.modalWindow {
+  display: none;
+  position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
   background-color: #6b7280bf;
-  display: none;
   justify-content: center;
   align-items: center;
   z-index: 3;
 
-  .modalWindow {
+  .content {
     width: 80%;
     height: 60%;
     background-color: $color-white;
@@ -68,13 +68,13 @@
   }
 }
 
-.background.show {
+.modalWindow.show {
   display: flex;
 }
 
 @media screen and (min-width: 426px) {
-  .background {
-    .modalWindow {
+  .modalWindow {
+    .content {
       height: 70%;
       padding: 24px;
       gap: 24px;
@@ -88,8 +88,8 @@
 }
 
 @media screen and (min-width: 769px) {
-  .background {
-    .modalWindow {
+  .modalWindow {
+    .content {
       width: 50%;
       height: 90%;
 
@@ -105,8 +105,8 @@
 }
 
 @media screen and (min-width: 2000px) {
-  .background {
-    .modalWindow {
+  .modalWindow {
+    .content {
       padding: 36px;
       gap: 24px;
       border-radius: 16px;

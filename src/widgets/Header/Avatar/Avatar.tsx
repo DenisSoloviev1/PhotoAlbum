@@ -1,5 +1,5 @@
 import React from "react";
-import "./Avatar.scss";
+import classes from "./Avatar.module.scss";
 
 interface AvatarProps{
     image: string;
@@ -7,7 +7,7 @@ interface AvatarProps{
 
 const Avatar: React.FC<AvatarProps> = ({image}) =>{
     return(
-        <div className="avatar">
+        <div className={classes.avatar}>
             <img src={image} alt="avatar" />
         </div>
     );

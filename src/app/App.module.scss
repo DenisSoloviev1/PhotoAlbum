@@ -1,8 +1,14 @@
-@import "../shared/Variables.scss";
+@import "../shared/Variables.module.scss";
 
-@font-face {
-  font-family: Inter;
-  src: url("./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -39,17 +45,15 @@ button:active {
 body {
   margin: 0;
   width: 100vw;
-  height: 100vh;
   background-color: $color-white-background;
   color: $color-black;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 
   #root {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Inter";
-    font-weight: 500;
   }
 }

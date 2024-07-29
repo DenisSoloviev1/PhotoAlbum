@@ -1,5 +1,5 @@
 import React from "react";
-import "./Main.scss";
+import "./Main.module.scss";
 import Card from "./Card/Card.tsx";
 
 interface MainProps{
