@@ -26,7 +26,6 @@ textarea {
 }
 button {
   cursor: pointer;
-  // font-size: 14px;
   @include adaptiv-font(14, 12);
 }
 button:focus,

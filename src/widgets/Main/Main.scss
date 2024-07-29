@@ -17,13 +17,33 @@ main {
   }
 }
 
+
+@media screen and (min-width: 426px) {
+  main {
+    section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @media screen and (min-width: 769px) {
   main {
-    padding: 32px;
+    padding: 48px;
 
     section {
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  main {
+    padding: 64px;
+
+    section {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
     }
   }
 }

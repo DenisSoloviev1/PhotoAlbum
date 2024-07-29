@@ -20,6 +20,15 @@ figure {
   }
 }
 
+
+@media screen and (min-width: 426px) {
+  figure {
+    img {
+      height: 160px;
+    }
+  }
+}
+
 @media screen and (min-width: 769px) {
   figure {
     gap: 8px;
@@ -27,6 +36,18 @@ figure {
     img {
       height: 216px;
       border-radius: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  figure {
+    gap: 12px;
+    font-size: 32px;
+
+    img {
+      height: 270px;
+      border-radius: 12px;
     }
   }
 }
