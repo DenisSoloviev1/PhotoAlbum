@@ -1,0 +1,23 @@
+section {
+  width: 100%;
+  max-width: 1920px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+}

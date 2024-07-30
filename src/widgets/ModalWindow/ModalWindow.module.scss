@@ -12,6 +12,7 @@
   z-index: 3;
 
   .content {
+    min-height: 312px;
     width: 80%;
     height: 60%;
     background-color: $color-white;
@@ -24,9 +25,11 @@
     padding: 12px;
     gap: 12px;
     box-sizing: border-box;
+    overflow-y: auto;
 
     img {
       width: 60%;
+      min-height: 90px;
       height: 30%;
       object-fit: cover;
       border-radius: 12px;
@@ -48,12 +51,16 @@
 
       textarea {
         width: 100%;
-        min-height: 50%;
+        min-height: 105px; 
         border: 1px solid $color-gray;
         border-radius: 6px;
         box-shadow: 0px 1px 2px 0px #0000000d;
-        padding: 5px;
-        box-sizing: border-box;
+        padding: 10px 6px;
+        outline: none;
+        resize: vertical;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        color: #111827;
       }
 
       p {

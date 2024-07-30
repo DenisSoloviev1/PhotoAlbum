@@ -30,6 +30,7 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
             <CustomButton
               svg={<Call />}
               text={"Call"}
+              onClick={() => openClick("tel:89998880909")}
             />
           </div>
         </div>

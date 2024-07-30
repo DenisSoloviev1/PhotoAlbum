@@ -24,11 +24,11 @@ const ModalWindow: React.FC<ModalWindowProps> = ({
         <img src={photo} alt={`img ${id}`} />
         <form action="">
           <label htmlFor="comment">Comment</label>
-          <textarea name="help text" id="comment"></textarea>
+          <textarea name="comment" id="comment"></textarea>
           <p>Write a few sentences about the photo.</p>
           <CustomButton
-            className={"violet"}
-            text={"Save"}
+            className="violet"
+            text="Save"
             onClick={handleClose}
           />
         </form>
@@ -38,4 +38,3 @@ const ModalWindow: React.FC<ModalWindowProps> = ({
 };
 
 export default ModalWindow;
-

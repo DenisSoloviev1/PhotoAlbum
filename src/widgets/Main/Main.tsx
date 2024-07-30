@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.module.scss";
-import Card from "./Card/Card.tsx";
+import PhotoList from "./PhotoList/PhotoList.tsx";
+import ModalWindow from "../ModalWindow/ModalWindow.tsx";
 
-interface MainProps{
-  toggleModalWindow: () => void;
-}
+const Main: React.FC = () => {
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
-const Main: React.FC<MainProps> = ({toggleModalWindow}) => {
-  const photo = require("./Card/photo.png");
+  const handlePhotoClick = (id: number, url: string) => {
+    setSelectedId(id);
+    setSelectedPhoto(url);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPhoto(null);
+    setSelectedId(null);
+    setShowModal(false);
+  };
 
   return (
-    <main>
-      <section>
-        <Card photo={photo} id={1} toggleModalWindow={toggleModalWindow}/>
-        <Card photo={photo} id={2} toggleModalWindow={toggleModalWindow}/>
-        <Card photo={photo} id={3} toggleModalWindow={toggleModalWindow}/>
-        <Card photo={photo} id={4} toggleModalWindow={toggleModalWindow}/>
-        <Card photo={photo} id={5} toggleModalWindow={toggleModalWindow}/>
-        <Card photo={photo} id={6} toggleModalWindow={toggleModalWindow}/>
-      </section>
+    <main >
+      <PhotoList onPhotoClick={handlePhotoClick} />
+      {showModal && selectedPhoto && selectedId && (
+        <ModalWindow
+          photo={selectedPhoto}
+          id={selectedId}
+          show={showModal}
+          handleClose={handleCloseModal}
+        />
+      )}
     </main>
   );
 };

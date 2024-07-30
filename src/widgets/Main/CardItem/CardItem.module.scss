@@ -17,6 +17,7 @@ figure {
   img:hover {
     cursor: pointer;
     filter: blur(1px);
+    transform: scale(1.05);
   }
 }
 
