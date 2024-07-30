@@ -25,7 +25,6 @@ const Main: React.FC = () => {
       <PhotoList onPhotoClick={handlePhotoClick} />
       {showModal && selectedPhoto && selectedId && (
         <ModalWindow
-          photo={selectedPhoto}
           id={selectedId}
           show={showModal}
           handleClose={handleCloseModal}

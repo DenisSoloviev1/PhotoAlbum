@@ -1,0 +1,17 @@
+.commentList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    li {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,22 +1,23 @@
 import React from "react";
-import useFetchPhotos from "../API.tsx";
+import useFetchData from "../../../API/useFetchData.tsx";
 import CardItem from "../CardItem/CardItem.tsx";
-import "./PhotoList.module.scss";
+import classes from "./PhotoList.module.scss";
+import Loader from "../../Loader/Loader.tsx";
 
 interface PhotoListProps {
-  onPhotoClick: (id: number, image: string) => void;
+  onPhotoClick: (id: number, url: string) => void;
 }
 
 const PhotoList: React.FC<PhotoListProps> = ({ onPhotoClick }) => {
   const url = "http://test-backend.itdelta.agency/api/images";
-  const { data, loading, error } = useFetchPhotos(url);
+  const { data, loading, error } = useFetchData<{ id: number; image: string }[]>(url);
 
-  if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>Ошибка: {error}</p>;
+  if (loading) return <Loader/>;
+  if (error) return <p className={classes.message}>Ошибка: {error}</p>;
 
   return (
-    <section>
-      {data.map((item) => (
+    <section className={classes.PhotoList}>
+      {data?.map((item) => (
         <CardItem
           key={item.id}
           id={item.id}
@@ -29,3 +30,4 @@ const PhotoList: React.FC<PhotoListProps> = ({ onPhotoClick }) => {
 };
 
 export default PhotoList;
+

@@ -30,7 +30,6 @@
     img {
       width: 60%;
       min-height: 90px;
-      height: 30%;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0px 25px 50px -12px #00000040;
@@ -38,7 +37,6 @@
 
     form {
       width: 100%;
-      height: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -51,16 +49,18 @@
 
       textarea {
         width: 100%;
-        min-height: 105px; 
+        min-height: 105px;
+        max-height: 20vh;
         border: 1px solid $color-gray;
         border-radius: 6px;
         box-shadow: 0px 1px 2px 0px #0000000d;
         padding: 10px 6px;
         outline: none;
         resize: vertical;
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-weight: 500;
         color: #111827;
+        overflow-y: auto;
       }
 
       p {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-const useFetchPhotos = (url: string) => {
-  const [data, setData] = useState<{ id: number; image: string }[]>([]);
+const useFetchData = <T,>(url: string) => {
+  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -21,4 +21,4 @@ const useFetchPhotos = (url: string) => {
   return { data, loading, error };
 };
 
-export default useFetchPhotos;
+export default useFetchData;
