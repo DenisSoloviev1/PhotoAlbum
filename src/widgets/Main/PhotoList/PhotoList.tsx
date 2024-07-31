@@ -16,7 +16,7 @@ const PhotoList: React.FC<PhotoListProps> = ({ onPhotoClick }) => {
   if (error) return <p className={classes.message}>Ошибка: {error}</p>;
 
   return (
-    <section className={classes.PhotoList}>
+    <section className={classes.photoList}>
       {data?.map((item) => (
         <CardItem
           key={item.id}

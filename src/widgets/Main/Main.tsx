@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Main.module.scss";
+import classes from "./Main.module.scss";
 import PhotoList from "./PhotoList/PhotoList.tsx";
-import ModalWindow from "../ModalWindow/ModalWindow.tsx";
+import ModalWindow from "./ModalWindow/ModalWindow.tsx";
 
 const Main: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
@@ -21,15 +21,17 @@ const Main: React.FC = () => {
   };
 
   return (
-    <main >
-      <PhotoList onPhotoClick={handlePhotoClick} />
-      {showModal && selectedPhoto && selectedId && (
-        <ModalWindow
-          id={selectedId}
-          show={showModal}
-          handleClose={handleCloseModal}
-        />
-      )}
+    <main>
+      <div className={classes.container}>
+        <PhotoList onPhotoClick={handlePhotoClick} />
+        {showModal && selectedPhoto && selectedId && (
+          <ModalWindow
+            id={selectedId}
+            show={showModal}
+            handleClose={handleCloseModal}
+          />
+        )}
+      </div>
     </main>
   );
 };

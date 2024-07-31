@@ -1,4 +1,4 @@
-section {
+.photoList {
   width: 100%;
   max-width: 1920px;
   display: grid;
@@ -9,14 +9,14 @@ section {
 }
 
 @media screen and (min-width: 769px) {
-  section {
+  .photoList {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
   }
 }
 
 @media screen and (min-width: 2000px) {
-  section {
+  .photoList {
     grid-template-columns: repeat(4, 1fr);
     gap: 48px;
   }

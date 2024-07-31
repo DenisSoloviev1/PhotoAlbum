@@ -1,5 +1,5 @@
 import React from "react";
-import "./CardItem.module.scss";
+import classes from "./CardItem.module.scss";
 
 interface CardItemProps {
   id: number;
@@ -9,7 +9,7 @@ interface CardItemProps {
 
 const CardItem: React.FC<CardItemProps> = ({ id, url, onPhotoClick }) => {
   return (
-    <figure>
+    <figure className={classes.cardItem}>
       <img src={url} alt={`Img ${id}`} onClick={() => onPhotoClick(id, url)} />
       <p>id: {id}</p>
     </figure>

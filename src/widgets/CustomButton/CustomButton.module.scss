@@ -1,6 +1,6 @@
 @import "../../shared/Variables.module.scss";
 
-button {
+.button {
   width: auto;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ button {
   }
 }
 
-button:hover {
+.button:hover {
   background-color: $color-gray;
   transition: all 0.5s ease;
 }
@@ -34,14 +34,14 @@ button:hover {
 
 
 @media screen and (min-width: 426px) {
-  button {
+  .button {
     padding: 9px 17px 9px 17px;
     gap: 8px;
   }
 }
 
 @media screen and (min-width: 2000px) {
-  button {
+  .button {
     padding: 18px 34px 18px 34px;
     gap: 16px;
     font-size: 24px;

@@ -10,12 +10,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ name }) => {
   const avatar = require("./Avatar/avatar.jpg");
-  const openClick = (to: string): void => {
+  const openLink = (to: string): void => {
     window.open(to, "_blank");
   };
 
   return (
-    <header>
+    <header className={classes.header}>
       <div className={classes.picture}></div>
       <div className={classes.bio}>
         <Avatar image={avatar} />
@@ -25,12 +25,12 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
             <CustomButton
               svg={<Message />}
               text={"Message"}
-              onClick={() => openClick("mailto:ex@mail.com")}
+              onClick={() => openLink("mailto:ex@mail.com")}
             />
             <CustomButton
               svg={<Call />}
               text={"Call"}
-              onClick={() => openClick("tel:89998880909")}
+              onClick={() => openLink("tel:89998880909")}
             />
           </div>
         </div>

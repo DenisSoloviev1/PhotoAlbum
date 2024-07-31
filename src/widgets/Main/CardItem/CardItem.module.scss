@@ -1,6 +1,6 @@
 @import "../../../shared/Variables.module.scss";
 
-figure {
+.cardItem {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -23,7 +23,7 @@ figure {
 
 
 @media screen and (min-width: 321px) {
-  figure {
+  .cardItem {
     img {
       height: 160px;
     }
@@ -31,7 +31,7 @@ figure {
 }
 
 @media screen and (min-width: 769px) {
-  figure {
+  .cardItem {
     gap: 8px;
 
     img {
@@ -42,7 +42,7 @@ figure {
 }
 
 @media screen and (min-width: 2000px) {
-  figure {
+  .cardItem {
     gap: 12px;
     font-size: 32px;
 

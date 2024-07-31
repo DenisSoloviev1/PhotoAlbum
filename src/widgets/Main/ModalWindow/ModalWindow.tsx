@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./ModalWindow.module.scss";
-import CustomButton from "../CustomButton/CustomButton.tsx";
-import useFetchData from "../../API/useFetchData.tsx";
-import CommentList from "../Main/CommentList/CommentList.tsx";
-import Loader from "../Loader/Loader.tsx";
+import CustomButton from "../../CustomButton/CustomButton.tsx";
+import useFetchData from "../../../API/useFetchData.tsx";
+import CommentList from "../CommentList/CommentList.tsx";
+import Loader from "../../Loader/Loader.tsx";
 
 interface Comment {
   id: number;

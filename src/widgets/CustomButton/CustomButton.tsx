@@ -1,11 +1,11 @@
-import React from "react";
+import React, {ReactNode} from "react";
 import classNames from "classnames";
 import classes from "./CustomButton.module.scss";
 
 interface CustomButtonProps {
   className?: string;
   text: string;
-  svg?: JSX.Element;
+  svg?: ReactNode;
   onClick?: () => void;
 }
 

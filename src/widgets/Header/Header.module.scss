@@ -1,6 +1,6 @@
 @import "../../shared/Variables.module.scss";
 
-header {
+.header {
   position: relative;
   width: 100%;
   min-height: 150px;
@@ -46,7 +46,7 @@ header {
 }
 
 @media screen and (min-width: 426px) {
-  header {
+  .header {
     .picture {
       height: 75%;
     }
@@ -59,7 +59,7 @@ header {
 }
 
 @media screen and (min-width: 769px) {
-  header {
+  .header {
     min-height: 192px;
     height: 30vh;
 
@@ -83,7 +83,7 @@ header {
 }
 
 @media screen and (min-width: 2000px) {
-  header {
+  .header {
     h1 {
       font-size: 48px;
     }
